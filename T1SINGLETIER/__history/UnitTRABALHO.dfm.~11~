@@ -1,0 +1,407 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 459
+  ClientWidth = 765
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnl1: TPanel
+    Left = 0
+    Top = 0
+    Width = 765
+    Height = 459
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 32
+    ExplicitTop = 16
+    ExplicitHeight = 421
+    object dbnvgrCONTROLE: TDBNavigator
+      Left = 1
+      Top = 1
+      Width = 763
+      Height = 25
+      DataSource = dsESTOQUE
+      Align = alTop
+      TabOrder = 0
+    end
+    object grp1: TGroupBox
+      Left = 1
+      Top = 26
+      Width = 763
+      Height = 119
+      Align = alTop
+      Caption = 'grp1'
+      TabOrder = 1
+      ExplicitLeft = 2
+      ExplicitTop = 32
+      object lbl1: TLabel
+        Left = 8
+        Top = 24
+        Width = 33
+        Height = 13
+        Caption = 'Codigo'
+      end
+      object lbl2: TLabel
+        Left = 184
+        Top = 24
+        Width = 46
+        Height = 13
+        Caption = 'Descricao'
+      end
+      object lbl3: TLabel
+        Left = 336
+        Top = 64
+        Width = 88
+        Height = 13
+        Caption = 'Quantidade(+ou-)'
+      end
+      object lbl4: TLabel
+        Left = 184
+        Top = 64
+        Width = 55
+        Height = 13
+        Caption = 'Fornecedor'
+      end
+      object lbl5: TLabel
+        Left = 8
+        Top = 64
+        Width = 23
+        Height = 13
+        Caption = 'Data'
+      end
+      object lbl6: TLabel
+        Left = 488
+        Top = 64
+        Width = 37
+        Height = 13
+        Caption = 'Unitario'
+      end
+      object lbl7: TLabel
+        Left = 615
+        Top = 64
+        Width = 24
+        Height = 13
+        Caption = 'Total'
+      end
+      object lbl8: TLabel
+        Left = 615
+        Top = 24
+        Width = 39
+        Height = 13
+        Caption = 'Unidade'
+      end
+      object dbedtCODIGO: TDBEdit
+        Left = 8
+        Top = 37
+        Width = 121
+        Height = 21
+        DataField = 'codigo'
+        DataSource = dsESTOQUE
+        TabOrder = 0
+      end
+      object dbedtDESCRICAO: TDBEdit
+        Left = 184
+        Top = 37
+        Width = 404
+        Height = 21
+        DataField = 'descricao'
+        DataSource = dsESTOQUE
+        TabOrder = 1
+      end
+      object dbedtUNIDADE: TDBEdit
+        Left = 615
+        Top = 37
+        Width = 121
+        Height = 21
+        DataField = 'unidade'
+        DataSource = dsESTOQUE
+        TabOrder = 2
+      end
+      object dbedtDATA: TDBEdit
+        Left = 8
+        Top = 83
+        Width = 121
+        Height = 21
+        DataField = 'data'
+        DataSource = dsESTOQUE
+        TabOrder = 3
+      end
+      object dbedtFORNECEDOR: TDBEdit
+        Left = 184
+        Top = 83
+        Width = 121
+        Height = 21
+        DataField = 'fornecedor'
+        DataSource = dsESTOQUE
+        TabOrder = 4
+      end
+      object dbedtQUANTIDADE: TDBEdit
+        Left = 336
+        Top = 83
+        Width = 121
+        Height = 21
+        DataField = 'quantidade'
+        DataSource = dsESTOQUE
+        TabOrder = 5
+      end
+      object dbedtUNITARIO: TDBEdit
+        Left = 488
+        Top = 83
+        Width = 121
+        Height = 21
+        DataField = 'unitario'
+        DataSource = dsESTOQUE
+        TabOrder = 6
+      end
+      object dbedtTOTAL: TDBEdit
+        Left = 615
+        Top = 83
+        Width = 121
+        Height = 21
+        DataField = 'total'
+        DataSource = dsESTOQUE
+        TabOrder = 7
+      end
+    end
+    object grp2: TGroupBox
+      Left = 1
+      Top = 145
+      Width = 763
+      Height = 105
+      Align = alTop
+      Caption = 'Pesquisa,Ordena'#231#227'o e Filtragem'
+      TabOrder = 2
+      ExplicitLeft = 288
+      ExplicitTop = 160
+      ExplicitWidth = 185
+      object lbl9: TLabel
+        Left = 320
+        Top = 32
+        Width = 24
+        Height = 13
+        Caption = 'Valor'
+      end
+      object lbl10: TLabel
+        Left = 168
+        Top = 32
+        Width = 24
+        Height = 13
+        Caption = 'A'#231#227'o'
+      end
+      object lbl11: TLabel
+        Left = 14
+        Top = 32
+        Width = 33
+        Height = 13
+        Caption = 'Campo'
+      end
+      object cbbCAMPO: TComboBox
+        Left = 14
+        Top = 51
+        Width = 145
+        Height = 21
+        TabOrder = 0
+        Items.Strings = (
+          'codigo'
+          'descricao'
+          'unidade'
+          'fornecedor'
+          'data'
+          'quantidade'
+          'unitario'
+          'total')
+      end
+      object cbbACAO: TComboBox
+        Left = 168
+        Top = 51
+        Width = 145
+        Height = 21
+        TabOrder = 1
+        Items.Strings = (
+          'indexar'
+          'locate'
+          'findkey'
+          'limpar'
+          'percorrer'
+          'filtrar'
+          'limpar filtro')
+      end
+      object edtVALOR: TEdit
+        Left = 319
+        Top = 51
+        Width = 205
+        Height = 21
+        TabOrder = 2
+      end
+      object btnEXECUTAR: TButton
+        Left = 552
+        Top = 48
+        Width = 184
+        Height = 25
+        Caption = 'EXECUTAR'
+        TabOrder = 3
+      end
+    end
+    object dbgrd1: TDBGrid
+      Left = 1
+      Top = 250
+      Width = 763
+      Height = 120
+      Align = alTop
+      DataSource = dsESTOQUE
+      TabOrder = 3
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'codigo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'descricao'
+          Width = 121
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'unidade'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'fornecedor'
+          Width = 157
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'data'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'quantidade'
+          Width = 96
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'unitario'
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'total'
+          Width = 99
+          Visible = True
+        end>
+    end
+    object grp3: TGroupBox
+      Left = 1
+      Top = 370
+      Width = 763
+      Height = 105
+      Align = alTop
+      Caption = 'Totais'
+      TabOrder = 4
+      ExplicitLeft = 2
+      ExplicitTop = 418
+      object lbl12: TLabel
+        Left = 322
+        Top = 24
+        Width = 115
+        Height = 13
+        Caption = 'Quantidade Em Estoque'
+      end
+      object lbl13: TLabel
+        Left = 566
+        Top = 24
+        Width = 82
+        Height = 13
+        Caption = 'Valor Do Estoque'
+      end
+      object dbedtQTD_EM_ESTOQUE: TDBEdit
+        Left = 320
+        Top = 43
+        Width = 121
+        Height = 21
+        DataSource = dsESTOQUE
+        TabOrder = 0
+      end
+      object dbedtVLR_EM_ESTOQUE: TDBEdit
+        Left = 566
+        Top = 43
+        Width = 121
+        Height = 21
+        DataSource = dsESTOQUE
+        TabOrder = 1
+      end
+    end
+  end
+  object dstCONTROLE: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    OnCalcFields = dstCONTROLECalcFields
+    Left = 400
+    Top = 304
+    object dstCONTROLEcodigo: TIntegerField
+      FieldName = 'codigo'
+    end
+    object dstCONTROLEdescricao: TStringField
+      FieldName = 'descricao'
+      Size = 50
+    end
+    object dstCONTROLEunidade: TStringField
+      FieldName = 'unidade'
+      Size = 2
+    end
+    object dstCONTROLEfornecedor: TStringField
+      FieldName = 'fornecedor'
+      Size = 50
+    end
+    object dstCONTROLEdata: TDateField
+      FieldName = 'data'
+    end
+    object dstCONTROLEquantidade: TFloatField
+      FieldName = 'quantidade'
+    end
+    object dstCONTROLEunitario: TCurrencyField
+      FieldName = 'unitario'
+    end
+    object dstCONTROLEtotal: TCurrencyField
+      FieldKind = fkCalculated
+      FieldName = 'total'
+      Calculated = True
+    end
+    object dstCONTROLEestoqueqtd: TAggregateField
+      FieldName = 'estoqueqtd'
+      DisplayName = ''
+      Expression = 'SUM(quantidade)'
+    end
+    object dstCONTROLEestoquevlr: TAggregateField
+      FieldName = 'estoquevlr'
+      DisplayName = ''
+      Expression = 'SUM(quantidade*unitario)'
+    end
+  end
+  object dsESTOQUE: TDataSource
+    DataSet = dstCONTROLE
+    Left = 520
+    Top = 280
+  end
+end
