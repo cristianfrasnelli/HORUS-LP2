@@ -1,0 +1,224 @@
+object FrmVeiculoMultas: TFrmVeiculoMultas
+  Left = 0
+  Top = 0
+  Align = alCustom
+  Caption = 'Ve'#237'culos e Multas'
+  ClientHeight = 515
+  ClientWidth = 774
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 29
+    Width = 33
+    Height = 13
+    Caption = 'C'#243'digo'
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 69
+    Width = 25
+    Height = 13
+    Caption = 'Placa'
+  end
+  object Label3: TLabel
+    Left = 176
+    Top = 69
+    Width = 29
+    Height = 13
+    Caption = 'Marca'
+  end
+  object Label4: TLabel
+    Left = 336
+    Top = 69
+    Width = 34
+    Height = 13
+    Caption = 'Modelo'
+  end
+  object Label5: TLabel
+    Left = 528
+    Top = 69
+    Width = 19
+    Height = 13
+    Caption = 'Ano'
+  end
+  object Label6: TLabel
+    Left = 24
+    Top = 109
+    Width = 56
+    Height = 13
+    Caption = 'Propriet'#225'rio'
+  end
+  object Label7: TLabel
+    Left = 24
+    Top = 312
+    Width = 22
+    Height = 13
+    Caption = 'Item'
+  end
+  object Label8: TLabel
+    Left = 208
+    Top = 312
+    Width = 23
+    Height = 13
+    Caption = 'Data'
+  end
+  object Label9: TLabel
+    Left = 400
+    Top = 312
+    Width = 23
+    Height = 13
+    Caption = 'Hora'
+  end
+  object Label10: TLabel
+    Left = 592
+    Top = 312
+    Width = 33
+    Height = 13
+    Caption = '$ Valor'
+  end
+  object Label11: TLabel
+    Left = 24
+    Top = 357
+    Width = 24
+    Height = 13
+    Caption = 'Local'
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 0
+    Width = 774
+    Height = 25
+    Align = alTop
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 24
+    Top = 48
+    Width = 121
+    Height = 21
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 24
+    Top = 88
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 176
+    Top = 88
+    Width = 121
+    Height = 21
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit
+    Left = 336
+    Top = 88
+    Width = 121
+    Height = 21
+    TabOrder = 4
+  end
+  object DBEdit5: TDBEdit
+    Left = 528
+    Top = 88
+    Width = 121
+    Height = 21
+    TabOrder = 5
+  end
+  object DBLookupComboBox1: TDBLookupComboBox
+    Left = 24
+    Top = 128
+    Width = 625
+    Height = 21
+    TabOrder = 6
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Top = 155
+    Width = 774
+    Height = 120
+    TabOrder = 7
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DBNavigator2: TDBNavigator
+    Left = 0
+    Top = 281
+    Width = 774
+    Height = 25
+    Align = alCustom
+    TabOrder = 8
+  end
+  object DBEdit6: TDBEdit
+    Left = 24
+    Top = 328
+    Width = 121
+    Height = 21
+    TabOrder = 9
+  end
+  object DBEdit7: TDBEdit
+    Left = 208
+    Top = 328
+    Width = 121
+    Height = 21
+    TabOrder = 10
+  end
+  object DBEdit8: TDBEdit
+    Left = 400
+    Top = 328
+    Width = 121
+    Height = 21
+    TabOrder = 11
+  end
+  object DBEdit9: TDBEdit
+    Left = 592
+    Top = 328
+    Width = 182
+    Height = 21
+    TabOrder = 12
+  end
+  object DBEdit10: TDBEdit
+    Left = 24
+    Top = 376
+    Width = 742
+    Height = 21
+    TabOrder = 13
+  end
+  object DBGrid2: TDBGrid
+    Left = 0
+    Top = 416
+    Width = 774
+    Height = 99
+    Align = alBottom
+    TabOrder = 14
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object DsVeiculo: TDataSource
+    Left = 272
+    Top = 32
+  end
+  object DsMultas: TDataSource
+    Left = 376
+    Top = 32
+  end
+  object DsProprietarios: TDataSource
+    Left = 456
+    Top = 32
+  end
+end

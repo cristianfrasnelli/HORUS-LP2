@@ -1,0 +1,18 @@
+program ExVeiculos;
+
+uses
+  Vcl.Forms,
+  Frm.Principal in 'Frm.Principal.pas' {FrmPrincipal},
+  Frm.Proprietarios in 'Frm.Proprietarios.pas' {DmConexao: TDataModule},
+  Dm.Conexao in 'Dm.Conexao.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TDmConexao, DmConexao);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

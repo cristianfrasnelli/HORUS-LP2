@@ -1,0 +1,56 @@
+object DmConexao: TDmConexao
+  OldCreateOrder = False
+  Height = 253
+  Width = 392
+  object FDConexao: TFDConnection
+    Params.Strings = (
+      'Database=C:\LP2\ExFireDac\fbclient.dll'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 32
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 128
+    Top = 32
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    Left = 240
+    Top = 32
+  end
+  object QryProprietario: TFDQuery
+    Connection = FDConexao
+    SQL.Strings = (
+      'SELECT PROPRIETARIO.PRP_CODIGO, '
+      'PROPRIETARIO.PRP_NOME, '
+      'PROPRIETARIO.PRP_ENDERECO'
+      'FROM PROPRIETARIO')
+    Left = 160
+    Top = 128
+    object QryProprietarioPRP_CODIGO: TIntegerField
+      DisplayLabel = 'C'#243'digo'
+      FieldName = 'PRP_CODIGO'
+      Origin = 'PRP_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QryProprietarioPRP_NOME: TStringField
+      DisplayLabel = 'Nome'
+      FieldName = 'PRP_NOME'
+      Origin = 'PRP_NOME'
+      ProviderFlags = [pfInUpdate]
+      Size = 60
+    end
+    object QryProprietarioPRP_ENDERECO: TStringField
+      DisplayLabel = 'Endere'#231'o'
+      FieldName = 'PRP_ENDERECO'
+      Origin = 'PRP_ENDERECO'
+      ProviderFlags = [pfInUpdate]
+      Size = 100
+    end
+  end
+end
