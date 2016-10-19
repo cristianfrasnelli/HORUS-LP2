@@ -1,0 +1,49 @@
+object DmConexao: TDmConexao
+  OldCreateOrder = False
+  Height = 313
+  Width = 551
+  object QuyPais: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT PAIS.PAI_CODIGO,'
+      'PAIS.PAI_NOME'
+      'FROM PAIS')
+    Left = 128
+    Top = 136
+    object QuyPaisPAI_CODIGO: TIntegerField
+      DisplayLabel = 'C'#243'digo Pais'
+      FieldName = 'PAI_CODIGO'
+      Origin = 'PAI_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QuyPaisPAI_NOME: TStringField
+      DisplayLabel = 'Nome Pais'
+      FieldName = 'PAI_NOME'
+      Origin = 'PAI_NOME'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 60
+    end
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\PrjFutebolFireDAC\Dados\FUTEBOL.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 48
+    Top = 32
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 152
+    Top = 32
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    Left = 272
+    Top = 40
+  end
+end

@@ -1,0 +1,27 @@
+unit UntFrmPais;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,DmConexaoBanco, Vcl.ExtCtrls,
+  Vcl.DBCtrls, Data.DB;
+
+type
+  TFrmPais = class(TForm)
+    DsPais: TDataSource;
+    DBNavigator1: TDBNavigator;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPais: TFrmPais;
+
+implementation
+
+{$R *.dfm}
+
+end.

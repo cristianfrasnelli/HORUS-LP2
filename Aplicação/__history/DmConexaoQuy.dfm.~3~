@@ -1,0 +1,29 @@
+object DmConexaoQuery: TDmConexaoQuery
+  OldCreateOrder = False
+  Height = 304
+  Width = 550
+  object QuyPais: TFDQuery
+    Connection = DmConexao.FDConnection1
+    SQL.Strings = (
+      'SELECT PAIS.PAI_CODIGO,'
+      'PAIS.PAI_NOME'
+      'FROM PAIS')
+    Left = 104
+    Top = 78
+    object QuyPaisPAI_CODIGO: TIntegerField
+      DisplayLabel = 'C'#243'digo Pais'
+      FieldName = 'PAI_CODIGO'
+      Origin = 'PAI_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QuyPaisPAI_NOME: TStringField
+      DisplayLabel = 'Nome Pais'
+      FieldName = 'PAI_NOME'
+      Origin = 'PAI_NOME'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 60
+    end
+  end
+end

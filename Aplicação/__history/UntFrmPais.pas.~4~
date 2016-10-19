@@ -1,0 +1,38 @@
+unit UntFrmPais;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs,DmConexaoBanco, Vcl.ExtCtrls,
+  Vcl.DBCtrls, Data.DB, Vcl.StdCtrls, Vcl.Mask, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TFrmPais = class(TForm)
+    DsPais: TDataSource;
+    DBNavigator1: TDBNavigator;
+    GRIDPais: TDBGrid;
+    DBEdit1: TDBEdit;
+    DBEdit2: TDBEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPais: TFrmPais;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmPais.FormCreate(Sender: TObject);
+begin
+DmConexao.QuyPais.Open();
+end;
+
+end.

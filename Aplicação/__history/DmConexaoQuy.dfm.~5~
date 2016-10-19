@@ -1,0 +1,94 @@
+object DmConexaoQuery: TDmConexaoQuery
+  OldCreateOrder = False
+  Height = 304
+  Width = 550
+  object QuyPais: TFDQuery
+    Connection = DmConexao.FDConnection1
+    SQL.Strings = (
+      'SELECT PAIS.PAI_CODIGO,'
+      'PAIS.PAI_NOME'
+      'FROM PAIS')
+    Left = 72
+    Top = 46
+    object QuyPaisPAI_CODIGO: TIntegerField
+      DisplayLabel = 'C'#243'digo Pais'
+      FieldName = 'PAI_CODIGO'
+      Origin = 'PAI_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QuyPaisPAI_NOME: TStringField
+      DisplayLabel = 'Nome Pais'
+      FieldName = 'PAI_NOME'
+      Origin = 'PAI_NOME'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 60
+    end
+  end
+  object QuyTatica: TFDQuery
+    Connection = DmConexao.FDConnection1
+    SQL.Strings = (
+      'SELECT TATICA.TAT_CODIGO,'
+      'TATICA.TAT_DESCRICAO,'
+      'TATICA.TAT_ESQUEMA'
+      'FROM TATICA')
+    Left = 152
+    Top = 48
+    object QuyTaticaTAT_CODIGO: TIntegerField
+      DisplayLabel = 'C'#243'digo T'#225'tica'
+      FieldName = 'TAT_CODIGO'
+      Origin = 'TAT_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QuyTaticaTAT_DESCRICAO: TStringField
+      DisplayLabel = 'Descri'#231#227'o T'#225'tica'
+      FieldName = 'TAT_DESCRICAO'
+      Origin = 'TAT_DESCRICAO'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 60
+    end
+    object QuyTaticaTAT_ESQUEMA: TStringField
+      DisplayLabel = 'Esquema'
+      FieldName = 'TAT_ESQUEMA'
+      Origin = 'TAT_ESQUEMA'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 5
+    end
+  end
+  object QuyTecnico: TFDQuery
+    Connection = DmConexao.FDConnection1
+    SQL.Strings = (
+      'SELECT TECNICO.TEC_CODIGO,'
+      'TECNICO.PAI_CODIGO,'
+      'TECNICO.TEC_NOME'
+      'FROM TECNICO')
+    Left = 232
+    Top = 48
+    object QuyTecnicoTEC_CODIGO: TIntegerField
+      DisplayLabel = 'C'#243'digo T'#233'cnico'
+      FieldName = 'TEC_CODIGO'
+      Origin = 'TEC_CODIGO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object QuyTecnicoPAI_CODIGO: TIntegerField
+      DisplayLabel = 'C'#243'digo Pais'
+      FieldName = 'PAI_CODIGO'
+      Origin = 'PAI_CODIGO'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+    end
+    object QuyTecnicoTEC_NOME: TStringField
+      DisplayLabel = 'Nome Tecnico'
+      FieldName = 'TEC_NOME'
+      Origin = 'TEC_NOME'
+      ProviderFlags = [pfInUpdate]
+      Required = True
+      Size = 60
+    end
+  end
+end

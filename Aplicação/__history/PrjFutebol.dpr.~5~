@@ -1,0 +1,19 @@
+program PrjFutebol;
+
+uses
+  Vcl.Forms,
+  UntFrmPrincipal in 'UntFrmPrincipal.pas' {FrmPrincipal},
+  DmConexaoBanco in 'DmConexaoBanco.pas' {DmConexao: TDataModule},
+  UntFrmPais in 'UntFrmPais.pas' {FrmPais},
+  DmConexaoQuy in 'DmConexaoQuy.pas' {DmConexaoQuery: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmPrincipal, FrmPrincipal);
+  Application.CreateForm(TDmConexao, DmConexao);
+  Application.CreateForm(TDmConexaoQuery, DmConexaoQuery);
+  Application.Run;
+end.
